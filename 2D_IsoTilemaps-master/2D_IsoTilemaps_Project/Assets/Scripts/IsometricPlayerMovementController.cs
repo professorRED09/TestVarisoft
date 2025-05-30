@@ -5,7 +5,11 @@ using UnityEngine;
 public class IsometricPlayerMovementController : MonoBehaviour
 {
     [SerializeField] FixedJoystick joystick; // ref for virtual joystick
+    [SerializeField] GameObject fireball;
+    [SerializeField] Transform shootPos;
+    //public Vector2 lastFacingDir; // use to assign a direction to shoot fireball
     public float movementSpeed = 1f;
+    public float bulletSpeed = 1f;
     IsometricCharacterRenderer isoRenderer;
 
     Rigidbody2D rbody;
@@ -16,6 +20,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Shoot();
+        }
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -26,15 +37,23 @@ public class IsometricPlayerMovementController : MonoBehaviour
         float verticalInput = /*Input.GetAxis("Vertical")*/ joystick.Vertical;
 
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-        inputVector = Vector2.ClampMagnitude(inputVector, 1);
+        inputVector = Vector2.ClampMagnitude(inputVector, 1);        
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         isoRenderer.SetDirection(movement);
         rbody.MovePosition(newPos);
+
+        if(inputVector.magnitude != 0)
+        {
+            shootPos.up = inputVector;
+        }
+        
     }
 
     public void Shoot()
-    {
-        print("SHOOT MAGIC BALL");
+    {        
+        GameObject _fireball = Instantiate(fireball, shootPos.position, shootPos.rotation);
+        Rigidbody2D fbRb = _fireball.GetComponent<Rigidbody2D>();
+        fbRb.linearVelocity = bulletSpeed * shootPos.up;
     }
 }
