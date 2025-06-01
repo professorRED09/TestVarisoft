@@ -9,7 +9,7 @@ public class Angel_IdleState : Angel_BaseState
 
     public override void UpdateState(Angel angel)
     {
-        if (angel.distance <= angel.attackRange)
+        if (angel.distance <= angel.attackRange && angel.player != null)
         {
             angel.SwitchState(angel.attackState);
         }

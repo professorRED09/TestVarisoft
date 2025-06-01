@@ -19,7 +19,7 @@ public class Fireball : MonoBehaviour
     {
         if (player.GetComponent<PlayerHealth>() != null)
         {                       
-            player.GetComponent<PlayerHealth>().TakeDamage(); // do damage to player
+            player.GetComponent<PlayerHealth>().TakeDamage(1f); // do damage to player
             animator.Play("Explode");
             Destroy(gameObject, 1.5f); // destroy the fireball after hitting player.
         }

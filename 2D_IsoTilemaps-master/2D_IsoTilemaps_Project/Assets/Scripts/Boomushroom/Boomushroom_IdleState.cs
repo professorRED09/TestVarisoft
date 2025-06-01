@@ -3,8 +3,7 @@ using UnityEngine;
 public class Boomushroom_IdleState : Boomushroom_BaseState
 {
     public override void EnterState(Boomushroom boomushroom)
-    {
-        Debug.Log("BoomIdle");
+    {        
         boomushroom.animator.Play("Static");
     }
 
@@ -12,7 +11,7 @@ public class Boomushroom_IdleState : Boomushroom_BaseState
     {
         //Debug.Log(boomushroom.distance + " LESS THAN " + boomushroom.chaseRange);
         //Debug.Log(boomushroom.distance <= boomushroom.chaseRange);
-        if (boomushroom.distance <= boomushroom.chaseRange)
+        if (boomushroom.distance <= boomushroom.chaseRange && boomushroom.player != null)
         {
             boomushroom.SwitchState(boomushroom.chaseState);
         }

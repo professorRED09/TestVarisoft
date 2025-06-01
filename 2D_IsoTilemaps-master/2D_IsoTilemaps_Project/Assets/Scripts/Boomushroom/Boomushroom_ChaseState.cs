@@ -9,9 +9,9 @@ public class Boomushroom_ChaseState : Boomushroom_BaseState
     }
 
     public override void UpdateState(Boomushroom boomushroom)
-    {
+    {        
         boomushroom.ChasePlayer();
-        if (boomushroom.distance <= boomushroom.bombRange)
+        if (boomushroom.distance <= boomushroom.readyRange)
         {
             boomushroom.Bomb();
         }

@@ -7,7 +7,6 @@ public class EnemyHealth : MonoBehaviour
 {
     [Header("Ref")]
     public Slider Slider;
-    public GameObject UI;
     public GameObject explodeVFX;
 
     [Header("Setting")]
@@ -44,8 +43,9 @@ public class EnemyHealth : MonoBehaviour
         if (currentHP <= 0)
         {
             isDead = true;
+            Instantiate(explodeVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            //Instantiate(explodeVFX, UI.transform.position, Quaternion.identity);
+            
             
         }        
     }

@@ -16,7 +16,7 @@ public class AttackPlayer : MonoBehaviour
 
         foreach (Collider2D player in hits)
         {            
-            player.GetComponent<PlayerHealth>().TakeDamage();            
+            player.GetComponent<PlayerHealth>().TakeDamage(1.5f);            
         }        
     }    
 

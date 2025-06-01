@@ -9,7 +9,7 @@ public class Skeleton_IdleState : Skeleton_BaseState
 
     public override void UpdateState(Skeleton skeleton)
     {
-        if(skeleton.distance <= skeleton.chaseRange)
+        if(skeleton.distance <= skeleton.chaseRange && skeleton.player != null)
         {
             skeleton.SwitchState(skeleton.walkState);
         }

@@ -15,10 +15,13 @@ public class Boomushroom : MonoBehaviour
     public GameObject player;
     public float distance;
     public float chaseRange;
+    public float readyRange;
     public float bombRange;
 
     public Animator animator;
     private SpriteRenderer render;
+    public LayerMask playerLayer;
+    public GameObject explodeVFX;
 
     private void Awake()
     {
@@ -40,6 +43,12 @@ public class Boomushroom : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+        if (player == null)
+        {
+            SwitchState(idleState);
+            return;
+        }
+        
         distance = Vector2.Distance(player.transform.position, transform.position);
         //Vector2 facingDir = (Vector2)(player.transform.position - transform.position);        
 
@@ -63,6 +72,12 @@ public class Boomushroom : MonoBehaviour
 
     public void Bomb()
     {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, bombRange, playerLayer);
+        foreach (Collider2D player in hits)
+        {
+            Instantiate(explodeVFX, transform.position, Quaternion.identity);
+            player.GetComponent<PlayerHealth>().TakeDamage(2.5f);
+        }
         Destroy(gameObject);
     }
 
@@ -79,26 +94,28 @@ public class Boomushroom : MonoBehaviour
 
     public void ChasePlayer()
     {
+        StartCoroutine(FlashFX());
         Vector2 currentPos = rb.position;
         Vector2 facingDir = (Vector2)(player.transform.position - transform.position);
 
         facingDir = Vector2.ClampMagnitude(facingDir, 1);
         Vector2 movement = facingDir * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.deltaTime;
-        rb.MovePosition(newPos);
-        //StartCoroutine(EnemyFlash());
+        rb.MovePosition(newPos);        
     }
 
-    public IEnumerator EnemyFlash()
+    public IEnumerator FlashFX()
     {
-        render.material.color = Color.red;
-        yield return new WaitForSeconds(0.5f);
-        render.material.color = new Vector4(255, 255, 255, 1f); ;        
+        render.material.color = Color.white;
+        yield return new WaitForSeconds(1f);
+        render.material.color = Color.red ;        
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, bombRange);
     }
 }

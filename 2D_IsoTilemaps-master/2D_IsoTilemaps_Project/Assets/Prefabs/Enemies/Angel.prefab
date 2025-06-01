@@ -453,7 +453,7 @@ Transform:
   m_GameObject: {fileID: 5518423676320191422}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.04, y: 3.23, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   distance: 0
-  attackRange: 4.65
+  attackRange: 2.25
   animator: {fileID: 30295506668008707}
   shootPos: {fileID: 5575003322604999678}
 --- !u!114 &1037747024478280858
@@ -557,7 +557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slider: {fileID: 4365849672164881753}
   UI: {fileID: 4746074097399310584}
-  explodeVFX: {fileID: 0}
+  explodeVFX: {fileID: 3671359540311166440, guid: e0219b6a56e9a6a45882ba87dc950dbe,
+    type: 3}
   isDead: 0
   maxHP: 8
 --- !u!1 &6898558261766791040

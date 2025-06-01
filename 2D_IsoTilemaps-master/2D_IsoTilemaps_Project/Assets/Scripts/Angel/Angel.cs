@@ -31,6 +31,13 @@ public class Angel : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+        if (player == null)
+        {
+            SwitchState(idleState);
+            return;
+        }
+
+        
         distance = Vector2.Distance(player.transform.position, transform.position);
         Vector2 facingDir = (Vector2)(player.transform.position - transform.position);
         shootPos.up = facingDir;
