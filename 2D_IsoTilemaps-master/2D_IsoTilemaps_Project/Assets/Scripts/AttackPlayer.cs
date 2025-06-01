@@ -9,9 +9,9 @@ public class AttackPlayer : MonoBehaviour
     [SerializeField] float xOffset;
     [SerializeField] float yOffset;
 
+    // Attack player within the given collider
     public void Attack()
-    {
-        
+    {        
         Collider2D[] hits = Physics2D.OverlapCircleAll(hitPos.position + new Vector3(xOffset, yOffset), attackRange, playerLayer);
 
         foreach (Collider2D player in hits)
@@ -20,9 +20,9 @@ public class AttackPlayer : MonoBehaviour
         }        
     }    
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(hitPos.position + new Vector3(xOffset, yOffset), attackRange);
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.DrawWireSphere(hitPos.position + new Vector3(xOffset, yOffset), attackRange);
 
-    }
+    //}
 }

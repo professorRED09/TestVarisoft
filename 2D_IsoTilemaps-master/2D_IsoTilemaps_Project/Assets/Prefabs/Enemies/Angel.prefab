@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 2100319484513476271}
   - component: {fileID: 4728145895002241753}
   m_Layer: 5
-  m_Name: UI (1)
+  m_Name: 'UI '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,9 +436,10 @@ GameObject:
   - component: {fileID: 1436281698366485816}
   - component: {fileID: 7119738058019135864}
   - component: {fileID: 6094355265577742028}
+  - component: {fileID: 1037747024478280858}
   m_Layer: 0
   m_Name: Angel
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -491,7 +492,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -542,6 +543,23 @@ MonoBehaviour:
   attackRange: 4.65
   animator: {fileID: 30295506668008707}
   shootPos: {fileID: 5575003322604999678}
+--- !u!114 &1037747024478280858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518423676320191422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71703f9d1c5858e478fd80bd381f3546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slider: {fileID: 4365849672164881753}
+  UI: {fileID: 4746074097399310584}
+  explodeVFX: {fileID: 0}
+  isDead: 0
+  maxHP: 8
 --- !u!1 &6898558261766791040
 GameObject:
   m_ObjectHideFlags: 0
