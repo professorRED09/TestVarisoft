@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -38,9 +39,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: UI
-    uniqueID: 1087707881
-    locked: 0
   - name: Background
     uniqueID: 526294755
     locked: 0
@@ -52,6 +50,9 @@ TagManager:
     locked: 0
   - name: Collider Debug
     uniqueID: 3310053101
+    locked: 0
+  - name: UI
+    uniqueID: 1087707881
     locked: 0
   m_RenderingLayers:
   - Default

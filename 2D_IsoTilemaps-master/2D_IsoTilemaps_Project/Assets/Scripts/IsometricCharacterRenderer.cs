@@ -71,12 +71,6 @@ public class IsometricCharacterRenderer : MonoBehaviour
         return Mathf.FloorToInt(stepCount);
     }
 
-
-
-
-
-
-
     //this function converts a string array to a int (animator hash) array.
     public static int[] AnimatorStringArrayToHashArray(string[] animationArray)
     {

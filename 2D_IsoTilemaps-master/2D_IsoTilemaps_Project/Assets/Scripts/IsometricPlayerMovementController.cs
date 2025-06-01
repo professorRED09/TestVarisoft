@@ -22,7 +22,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
         }
