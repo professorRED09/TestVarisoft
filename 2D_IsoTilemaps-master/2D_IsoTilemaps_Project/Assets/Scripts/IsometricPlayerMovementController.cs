@@ -5,7 +5,7 @@ using UnityEngine;
 public class IsometricPlayerMovementController : MonoBehaviour
 {
     [SerializeField] FixedJoystick joystick; // ref for virtual joystick
-    [SerializeField] GameObject fireball;
+    [SerializeField] GameObject spellball;
     [SerializeField] Transform shootPos;
     //public Vector2 lastFacingDir; // use to assign a direction to shoot fireball
     public float movementSpeed = 1f;
@@ -52,8 +52,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     public void Shoot()
     {        
-        GameObject _fireball = Instantiate(fireball, shootPos.position, shootPos.rotation);
-        Rigidbody2D fbRb = _fireball.GetComponent<Rigidbody2D>();
+        GameObject _spellball = Instantiate(spellball, shootPos.position, shootPos.rotation);
+        Rigidbody2D fbRb = _spellball.GetComponent<Rigidbody2D>();
         fbRb.linearVelocity = bulletSpeed * shootPos.up;
     }
 }

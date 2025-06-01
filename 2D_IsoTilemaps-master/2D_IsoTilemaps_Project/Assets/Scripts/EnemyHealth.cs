@@ -44,8 +44,9 @@ public class EnemyHealth : MonoBehaviour
         if (currentHP <= 0)
         {
             isDead = true;
-            Instantiate(explodeVFX, UI.transform.position, Quaternion.identity);
             Destroy(gameObject);
+            //Instantiate(explodeVFX, UI.transform.position, Quaternion.identity);
+            
         }        
     }
 }
