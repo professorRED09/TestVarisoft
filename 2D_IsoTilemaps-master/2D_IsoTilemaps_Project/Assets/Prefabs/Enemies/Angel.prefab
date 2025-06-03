@@ -150,8 +150,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -984914195
-  m_SortingLayer: 2
+  m_SortingLayerID: 2130146985
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ab8c6ad7260aa4988b3a67bd49e66038, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 7119738058019135864}
   - component: {fileID: 6094355265577742028}
   - component: {fileID: 1037747024478280858}
+  - component: {fileID: 1762321396503808373}
   m_Layer: 0
   m_Name: Angel
   m_TagString: Enemy
@@ -540,9 +541,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   distance: 0
-  attackRange: 4.3
+  attackRange: 3.05
   animator: {fileID: 30295506668008707}
   shootPos: {fileID: 5575003322604999678}
+  offSetVec: {x: 0, y: 0, z: 0}
 --- !u!114 &1037747024478280858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +562,18 @@ MonoBehaviour:
     type: 3}
   isDead: 0
   maxHP: 8
+--- !u!210 &1762321396503808373
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518423676320191422}
+  m_Enabled: 1
+  m_SortingLayerID: 2130146985
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &6898558261766791040
 GameObject:
   m_ObjectHideFlags: 0

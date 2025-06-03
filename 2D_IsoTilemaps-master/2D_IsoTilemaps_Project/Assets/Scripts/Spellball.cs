@@ -5,7 +5,7 @@ public class Spellball : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created      
     void Start()
     {        
-        Destroy(gameObject,2f); // if it doesn't hit with anything within 2 sec, destroy itself
+        Destroy(gameObject,1f); // if it doesn't hit with anything within time, destroy itself
     }
 
     private void OnTriggerEnter2D(Collider2D enemy)

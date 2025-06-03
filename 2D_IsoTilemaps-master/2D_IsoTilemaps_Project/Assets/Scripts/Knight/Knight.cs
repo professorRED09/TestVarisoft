@@ -14,6 +14,8 @@ public class Knight : MonoBehaviour
     public GameObject player;
     public float distance;
 
+    public Vector2 facingDir;
+
     Rigidbody2D rb;
 
     private void Awake()
@@ -38,26 +40,19 @@ public class Knight : MonoBehaviour
             return;
         }
 
-        if (player == null) return;
         //Vector2 currentPos = rb.position;
-        Vector2 facingDir = (Vector2)(player.transform.position - transform.position);
+        facingDir = (Vector2)(player.transform.position - transform.position);
         distance = Vector2.Distance(player.transform.position, transform.position);
 
         facingDir = Vector2.ClampMagnitude(facingDir, 1);
-        isoRenderer.SetDirection(facingDir, distance, player);
+        //isoRenderer.SetDirection(facingDir, distance, player);
     }
 
     public void SwitchState(Knight_BaseState state)
     {
         currentState = state;
         currentState.EnterState(this);
-    }
-
- 
-    void FixedUpdate()
-    {
-
-    }
+    }    
 
     public void ChasePlayer()
     {

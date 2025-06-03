@@ -9,6 +9,7 @@ public class Knight_WalkState : Knight_BaseState
 
     public override void UpdateState(Knight knight)
     {
+        knight.isoRenderer.SetDirection(knight.facingDir, knight.distance, knight.player);
         knight.ChasePlayer(); // chase player
         if (knight.distance > knight.isoRenderer.chaseRange)
         {
