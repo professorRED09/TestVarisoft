@@ -39,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHP <= 0)
         {
             currentHP = 0;
+            ChangeHPBar(currentHP, maxHP);
             isDead = true;
             Destroy(player);
         }

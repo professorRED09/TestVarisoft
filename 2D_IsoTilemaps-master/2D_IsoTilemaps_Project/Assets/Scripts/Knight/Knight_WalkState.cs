@@ -9,8 +9,15 @@ public class Knight_WalkState : Knight_BaseState
 
     public override void UpdateState(Knight knight)
     {
-        // chase player
-        // if player's in range, attack them
+        knight.ChasePlayer(); // chase player
+        if (knight.distance > knight.isoRenderer.chaseRange)
+        {
+            knight.SwitchState(knight.idleState);
+        }
+        else if (knight.distance <= knight.isoRenderer.attackRange)
+        {
+            knight.SwitchState(knight.attackState);
+        }
     }
 
     public override void ExitState(Knight knight)

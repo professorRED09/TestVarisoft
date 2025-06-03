@@ -126,6 +126,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -384,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Knight_Jump_dir4_0: -6628548383245582757
+      Knight_Jump_dir4_1: -5917794173721533967
+      Knight_Jump_dir4_10: 8333107268079312973
+      Knight_Jump_dir4_2: -8951833292994743286
+      Knight_Jump_dir4_3: -5082031234816053067
+      Knight_Jump_dir4_4: -7104713721734002383
+      Knight_Jump_dir4_5: -6131560061308851620
+      Knight_Jump_dir4_6: 6954117414616058782
+      Knight_Jump_dir4_7: 6447691112452652014
+      Knight_Jump_dir4_8: -4552751188174072153
+      Knight_Jump_dir4_9: 17557110883079876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -174,6 +174,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -784,7 +797,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Knight_Die_dir5_0: 854382023037072599
+      Knight_Die_dir5_1: 8476702663496711646
+      Knight_Die_dir5_10: -8141569993874470549
+      Knight_Die_dir5_11: -4426219492565839094
+      Knight_Die_dir5_12: 6914821407026750059
+      Knight_Die_dir5_13: -6838964418313497024
+      Knight_Die_dir5_14: -9092898590921428909
+      Knight_Die_dir5_15: 2689294416810952833
+      Knight_Die_dir5_16: -7230757129493068467
+      Knight_Die_dir5_17: -1061600859352225034
+      Knight_Die_dir5_18: 1887523016751819020
+      Knight_Die_dir5_19: -6230928893339207657
+      Knight_Die_dir5_2: 8209123215568592538
+      Knight_Die_dir5_20: -1964354817863217139
+      Knight_Die_dir5_21: -8051242957296813071
+      Knight_Die_dir5_22: -6811680810210617173
+      Knight_Die_dir5_23: 372283965616485633
+      Knight_Die_dir5_24: 5330792317273687112
+      Knight_Die_dir5_25: -1817242134404693499
+      Knight_Die_dir5_26: 2700528896487372793
+      Knight_Die_dir5_3: -4022569230694826893
+      Knight_Die_dir5_4: 6108299912415886808
+      Knight_Die_dir5_5: 5412270918836909208
+      Knight_Die_dir5_6: -9033198066671430428
+      Knight_Die_dir5_7: -3781217848153651007
+      Knight_Die_dir5_8: -1213008557171368778
+      Knight_Die_dir5_9: -7918674113126076259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

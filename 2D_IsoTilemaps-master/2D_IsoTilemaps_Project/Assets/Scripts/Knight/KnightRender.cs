@@ -4,9 +4,13 @@ public class KnightRender : MonoBehaviour
 {
     public static readonly string[] staticDirections = { "Static N", "Static NW", "Static W", "Static SW", "Static S", "Static SE", "Static E", "Static NE" };
     public static readonly string[] runDirections = { "Run N", "Run NW", "Run W", "Run SW", "Run S", "Run SE", "Run E", "Run NE" };
+    public static readonly string[] attackDirections = { "Attack N", "Attack NW", "Attack W", "Attack SW", "Attack S", "Attack SE", "Attack E", "Attack NE" };
 
     Animator animator;
     int lastDirection;
+
+    public float chaseRange;
+    public float attackRange;
 
     private void Awake()
     {
@@ -15,24 +19,23 @@ public class KnightRender : MonoBehaviour
     }
 
 
-    public void SetDirection(Vector2 direction, float distance)
-    {
-        //use the Run states by default
+    public void SetDirection(Vector2 direction, float distance, GameObject player)
+    {        
         string[] directionArray = null;
-
         
-        if (distance > 3f)
-        {
-            //if we are basically standing still, we'll use the Static states
-            //we won't be able to calculate a direction if the user isn't pressing one, anyway!
+        if (distance > chaseRange || player == null)
+        {            
             directionArray = staticDirections;
+            lastDirection = DirectionToIndex(direction, 8);
+        }
+        else if (distance <= chaseRange && distance > attackRange)
+        {
+            directionArray = runDirections;
+            lastDirection = DirectionToIndex(direction, 8);
         }
         else
         {
-            //we can calculate which direction we are going in
-            //use DirectionToIndex to get the index of the slice from the direction vector
-            //save the answer to lastDirection
-            directionArray = runDirections;
+            directionArray = attackDirections;
             lastDirection = DirectionToIndex(direction, 8);
         }
 
@@ -82,6 +85,14 @@ public class KnightRender : MonoBehaviour
         }
         //we're done!
         return hashArray;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
 }

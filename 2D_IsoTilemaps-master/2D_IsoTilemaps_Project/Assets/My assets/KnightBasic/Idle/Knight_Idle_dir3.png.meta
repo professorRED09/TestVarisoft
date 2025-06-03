@@ -144,6 +144,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -534,7 +547,24 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Knight_Idle_dir3_0: -4009253762174283048
+      Knight_Idle_dir3_1: 5002210786834486809
+      Knight_Idle_dir3_10: 8211094741787637074
+      Knight_Idle_dir3_11: -4476351377513692777
+      Knight_Idle_dir3_12: 5259702546394840493
+      Knight_Idle_dir3_13: -5728888661783426776
+      Knight_Idle_dir3_14: -529410005782519797
+      Knight_Idle_dir3_15: 5916291071034723878
+      Knight_Idle_dir3_16: -5029225886063747488
+      Knight_Idle_dir3_2: 1126485315731438643
+      Knight_Idle_dir3_3: 9019570632777781224
+      Knight_Idle_dir3_4: 2115854634390766008
+      Knight_Idle_dir3_5: 5156456394761093214
+      Knight_Idle_dir3_6: 5155235606244898484
+      Knight_Idle_dir3_7: -5603451053027978589
+      Knight_Idle_dir3_8: 5348819129660733081
+      Knight_Idle_dir3_9: -6100596714713205226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

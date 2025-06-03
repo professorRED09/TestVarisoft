@@ -174,6 +174,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -784,7 +797,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Knight_Die_dir1_0: -5477271925355905382
+      Knight_Die_dir1_1: -1793749410323971165
+      Knight_Die_dir1_10: 3340466467723756207
+      Knight_Die_dir1_11: -3938809454992728677
+      Knight_Die_dir1_12: 9065483835646278040
+      Knight_Die_dir1_13: -826005149485527875
+      Knight_Die_dir1_14: 6729993513966409590
+      Knight_Die_dir1_15: 1893588801520157435
+      Knight_Die_dir1_16: 3190676497524953182
+      Knight_Die_dir1_17: 8644035462076144881
+      Knight_Die_dir1_18: 2531630217270725427
+      Knight_Die_dir1_19: -3517904012148134389
+      Knight_Die_dir1_2: -7557780846296819809
+      Knight_Die_dir1_20: -6914704061851892945
+      Knight_Die_dir1_21: -8576955469703079663
+      Knight_Die_dir1_22: 7342201396528683650
+      Knight_Die_dir1_23: 2816622068462370462
+      Knight_Die_dir1_24: 9037110017187545903
+      Knight_Die_dir1_25: -5278640325889373548
+      Knight_Die_dir1_26: -5878251325145305783
+      Knight_Die_dir1_3: -186763825253891557
+      Knight_Die_dir1_4: -104463097722353909
+      Knight_Die_dir1_5: 33294057000138548
+      Knight_Die_dir1_6: -3252398869275222100
+      Knight_Die_dir1_7: -2038020509691939977
+      Knight_Die_dir1_8: -2687483852292300085
+      Knight_Die_dir1_9: -7661253700592260603
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

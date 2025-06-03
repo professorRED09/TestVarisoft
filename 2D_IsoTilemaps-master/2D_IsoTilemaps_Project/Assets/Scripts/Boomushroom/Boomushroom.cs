@@ -94,6 +94,7 @@ public class Boomushroom : MonoBehaviour
 
     public void ChasePlayer()
     {
+        if (player == null) return;
         StartCoroutine(FlashFX());
         Vector2 currentPos = rb.position;
         Vector2 facingDir = (Vector2)(player.transform.position - transform.position);

@@ -12,17 +12,18 @@ public class AttackPlayer : MonoBehaviour
     // Attack player within the given collider
     public void Attack()
     {        
-        Collider2D[] hits = Physics2D.OverlapCircleAll(hitPos.position + new Vector3(xOffset, yOffset), attackRange, playerLayer);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange, playerLayer);
 
         foreach (Collider2D player in hits)
         {            
             player.GetComponent<PlayerHealth>().TakeDamage(1.5f);            
         }        
-    }    
+    }
 
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.DrawWireSphere(hitPos.position + new Vector3(xOffset, yOffset), attackRange);
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.pink;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
 
-    //}
+    }
 }

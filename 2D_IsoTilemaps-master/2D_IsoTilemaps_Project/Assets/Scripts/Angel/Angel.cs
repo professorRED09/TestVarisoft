@@ -16,6 +16,8 @@ public class Angel : MonoBehaviour
     public Animator animator;
     public Transform shootPos;
 
+    public Vector3 offSetVec;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,7 +41,7 @@ public class Angel : MonoBehaviour
 
         
         distance = Vector2.Distance(player.transform.position, transform.position);
-        Vector2 facingDir = (Vector2)(player.transform.position - transform.position);
+        Vector2 facingDir = (Vector2)(player.transform.position + offSetVec - transform.position);
         shootPos.up = facingDir;
     }
 
