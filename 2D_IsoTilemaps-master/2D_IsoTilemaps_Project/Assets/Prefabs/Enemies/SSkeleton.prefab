@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d66d3699b68654fa6d48942188f857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRange: 1.8
+  chaseRange: 2.44
   attackRange: 0.8
 --- !u!1 &3968363743621244862
 GameObject:
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a77a23e1130bff14a8a13dc89ace28c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
+  movementSpeed: 2
   isoRenderer: {fileID: 0}
   player: {fileID: 0}
   distance: 0
@@ -753,8 +753,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.26}
-  m_Radius: 0.39
+  m_Offset: {x: 0, y: 0.3522126}
+  m_Radius: 0.29778737
 --- !u!114 &4395548788345278512
 MonoBehaviour:
   m_ObjectHideFlags: 0

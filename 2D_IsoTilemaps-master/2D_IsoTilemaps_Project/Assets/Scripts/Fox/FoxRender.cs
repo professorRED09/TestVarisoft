@@ -18,6 +18,21 @@ public class FoxRender : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    public void SetAnimationStatic(Vector2 direction)
+    {
+        string[] directionArray = null;
+        directionArray = staticDirections;
+        lastDirection = DirectionToIndex(direction, 8);
+        animator.Play(directionArray[lastDirection]);
+    }
+
+    public void SetAnimationRun(Vector2 direction)
+    {
+        string[] directionArray = null;
+        directionArray = runDirections;
+        lastDirection = DirectionToIndex(direction, 8);
+        animator.Play(directionArray[lastDirection]);
+    }   
 
     public void SetDirection(Vector2 direction, float distance, GameObject player)
     {

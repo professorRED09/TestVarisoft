@@ -9,7 +9,7 @@ public class Fox_IdleState : Fox_BaseState
 
     public override void UpdateState(Fox fox)
     {
-        fox.isoRenderer.SetDirection(fox.facingDir, fox.distance, fox.player);
+        fox.isoRenderer.SetAnimationStatic(fox.facingDir);
         if (fox.distance <= fox.isoRenderer.chaseRange && fox.player != null)
         {
             fox.SwitchState(fox.chaseState);

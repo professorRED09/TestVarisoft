@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa9d08b37e6d4040b5c6b75e1145e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 2.5
   isoRenderer: {fileID: 7534140040100172240}
   player: {fileID: 0}
   distance: 0
