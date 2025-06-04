@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseRange: 2.44
-  attackRange: 0.8
+  attackRange: 1.05
 --- !u!1 &3968363743621244862
 GameObject:
   m_ObjectHideFlags: 0

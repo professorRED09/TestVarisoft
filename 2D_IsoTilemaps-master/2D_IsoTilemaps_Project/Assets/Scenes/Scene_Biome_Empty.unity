@@ -9021,6 +9021,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1436281698366485816, guid: 53e17fa37e37de843b509566d8ac86b1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436281698366485816, guid: 53e17fa37e37de843b509566d8ac86b1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5070234447783432355, guid: 53e17fa37e37de843b509566d8ac86b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9076,21 +9086,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Angel
       objectReference: {fileID: 0}
-    - target: {fileID: 5518423676320191422, guid: 53e17fa37e37de843b509566d8ac86b1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6094355265577742028, guid: 53e17fa37e37de843b509566d8ac86b1,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 911853649}
-    - target: {fileID: 6094355265577742028, guid: 53e17fa37e37de843b509566d8ac86b1,
-        type: 3}
-      propertyPath: attackRange
-      value: 3.88
-      objectReference: {fileID: 0}
     - target: {fileID: 7353031983982386661, guid: 53e17fa37e37de843b509566d8ac86b1,
         type: 3}
       propertyPath: m_AnchorMax.x

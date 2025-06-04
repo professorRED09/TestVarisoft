@@ -22,10 +22,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Shoot();
-        }
+        // for testing on PC
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Shoot();
+        //}
     }
 
     // Update is called once per frame
@@ -45,7 +46,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         if(inputVector.magnitude != 0)
         {
-            shootPos.up = inputVector;
+            float angle = Mathf.Atan2(inputVector.x, inputVector.y) * Mathf.Rad2Deg * -1;
+            float snappedAngle = Mathf.Round(angle / 45f) * 45f;
+            shootPos.rotation = Quaternion.Euler(0f, 0f, snappedAngle);
         }
         
     }

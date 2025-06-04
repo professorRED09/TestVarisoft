@@ -58,6 +58,7 @@ public class SSkeleton : MonoBehaviour
 
     public void ChasePlayer()
     {
+        if (player == null) return;
         Vector2 currentPos = rb.position;
         Vector2 facingDir = (Vector2)(player.transform.position - transform.position);
 
